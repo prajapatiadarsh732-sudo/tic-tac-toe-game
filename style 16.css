@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(15, 41, 42);
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    cursor: none;   /* better than cursor: none */
+}
+
+.box {
+    height: 15vmin;
+    width: 15vmin;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#reset-btn {
+    padding: 8px;
+    color: aliceblue;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: blueviolet;
+}
+
+.new-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#new-game-btn {
+    padding: 8px;
+    color: aliceblue;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.msg-container{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    text-shadow: 2px 2px 2px black;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    animation: pop 0.6s ease-in-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+body.winner-bg {
+    animation: bgFlash 0.5s alternate 6;
+}
+
+@keyframes bgFlash {
+    from { background-color: rgb(15, 41, 42); }
+    to { background-color:  rgb(49, 79, 80); }
+}
+
+.hide {
+    display: none;
+}
+
+#msg {
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px blueviolet      ;
+    color: antiquewhite;
+}
+.merge{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+   
